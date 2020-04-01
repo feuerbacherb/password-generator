@@ -11,6 +11,8 @@ var userPassword = "";
 
 
 var generatePassword = function() {
+   passGroup = "";
+   userPassword = "";
    passwordLength = promptPasswordLength();
    
    // if the length is not a number, let the user know and reprompt
@@ -30,6 +32,10 @@ var generatePassword = function() {
    console.log(passGroup);
 
    createPassword();
+
+   document.getElementById("password").innerHTML = userPassword;
+   //window.alert("Your new password is " + userPassword);
+
 };
 
 var promptPasswordLength = function() {
@@ -75,4 +81,4 @@ var createPassword = function() {
    }
 };
 
-generatePassword();
+//generatePassword();
