@@ -22,8 +22,9 @@ var generatePassword = function() {
    console.log(passwordLength);
 
    // prompt for lower case characters
+   passGroup += promptLowerCase();
 
-   
+   console.log(passGroup);
 };
 
 var promptPasswordLength = function() {
@@ -35,5 +36,13 @@ var promptGoodNumber = function() {
    window.alert("You did not enter a number betweeen 8 and 128!");
 }
 
+var promptLowerCase = function() {
+   var txt = "";
+   var lc = window.confirm("Would you like to include lowercase characters?");
+   if (lc) {
+      txt += charLower;
+   }
+   return txt;
+}
 
 generatePassword();
