@@ -26,6 +26,8 @@ var generatePassword = function() {
    console.log(passGroup);
    passGroup += promptUpperCase();
    console.log(passGroup);
+   passGroup += promptSpecial();
+   console.log(passGroup);
 };
 
 var promptPasswordLength = function() {
@@ -51,6 +53,15 @@ var promptUpperCase = function() {
    var uc = window.confirm("Would you like to include uppercase characters?");
    if (uc) {
       txt += charUpper;
+   }
+   return txt;
+}
+
+var promptSpecial = function() {
+   var txt = "";
+   var sp = window.confirm("Would you like to include special characters?");
+   if (sp) {
+      txt += charSpecial;
    }
    return txt;
 }
