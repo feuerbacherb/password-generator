@@ -28,16 +28,18 @@ var generatePassword = function() {
    console.log(passGroup);
    passGroup += promptSpecial();
    console.log(passGroup);
+
+   createPassword();
 };
 
 var promptPasswordLength = function() {
    var pl = parseInt(window.prompt("Please enter a password length [8 - 128]."));
    return pl;
-}
+};
 
 var promptGoodNumber = function() {
    window.alert("You did not enter a number betweeen 8 and 128!");
-}
+};
 
 var promptLowerCase = function() {
    var txt = "";
@@ -46,7 +48,7 @@ var promptLowerCase = function() {
       txt += charLower;
    }
    return txt;
-}
+};
 
 var promptUpperCase = function() {
    var txt = "";
@@ -55,7 +57,7 @@ var promptUpperCase = function() {
       txt += charUpper;
    }
    return txt;
-}
+};
 
 var promptSpecial = function() {
    var txt = "";
@@ -64,6 +66,13 @@ var promptSpecial = function() {
       txt += charSpecial;
    }
    return txt;
-}
+};
+
+var createPassword = function() {
+   for (i = 0; i < passwordLength; i++) {
+      userPassword += passGroup.charAt(Math.floor(Math.random() * passGroup.length));
+      console.log(userPassword);
+   }
+};
 
 generatePassword();
