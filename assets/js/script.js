@@ -14,17 +14,16 @@ var generatePassword = function() {
    passwordLength = promptPasswordLength();
    
    // if the length is not a number, let the user know and reprompt
-   while (isNaN(passwordLength)){
+   while (isNaN(passwordLength) || passwordLength < 8 || passwordLength > 128){
       promptGoodNumber();
       passwordLength = promptPasswordLength();
    }
 
-   // check to see if the length is between 8 and 128
-   while (passwordLength < 8 || passwordLength > 128){
-      promptGoodNumber();
-      passwordLength = promptPasswordLength();
-   }
    console.log(passwordLength);
+
+   // prompt for lower case characters
+
+   
 };
 
 var promptPasswordLength = function() {
