@@ -23,7 +23,8 @@ var generatePassword = function() {
 
    // prompt for lower case characters
    passGroup += promptLowerCase();
-
+   console.log(passGroup);
+   passGroup += promptUpperCase();
    console.log(passGroup);
 };
 
@@ -41,6 +42,15 @@ var promptLowerCase = function() {
    var lc = window.confirm("Would you like to include lowercase characters?");
    if (lc) {
       txt += charLower;
+   }
+   return txt;
+}
+
+var promptUpperCase = function() {
+   var txt = "";
+   var uc = window.confirm("Would you like to include uppercase characters?");
+   if (uc) {
+      txt += charUpper;
    }
    return txt;
 }
