@@ -25,11 +25,11 @@ var generatePassword = function() {
 
    // prompt for lower case characters
    passGroup += promptLowerCase();
-   console.log(passGroup);
+//   console.log(passGroup);
    passGroup += promptUpperCase();
-   console.log(passGroup);
+//   console.log(passGroup);
    passGroup += promptSpecial();
-   console.log(passGroup);
+//   console.log(passGroup);
 
    createPassword();
 
@@ -77,7 +77,7 @@ var promptSpecial = function() {
 var createPassword = function() {
    for (i = 0; i < passwordLength; i++) {
       userPassword += passGroup.charAt(Math.floor(Math.random() * passGroup.length));
-      console.log(userPassword);
+//      console.log(userPassword);
    }
 };
 
