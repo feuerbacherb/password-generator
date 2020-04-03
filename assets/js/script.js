@@ -34,6 +34,11 @@ var generatePassword = function() {
    passGroup += promptSpecial();
 //   console.log(passGroup);
 
+   if (passGroup === "") {
+      window.alert("Since you did not choose an option, the password will be only lowercase.");
+      passGroup += charLower;
+   }
+
    createPassword();
 
    document.getElementById("password").innerHTML = userPassword;
