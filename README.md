@@ -10,5 +10,5 @@
 ![Image of Password Generator](.//assets/images/display.jpg)
 
 ## Links to working site and repo
-Repo: https://github.com/feuerbacherb/password-generator
-Live: https://feuerbacherb.github.io/password-generator/
+* Repo: https://github.com/feuerbacherb/password-generator
+* Live: https://feuerbacherb.github.io/password-generator/
