@@ -12,3 +12,6 @@
 ## Links to working site and repo
 * Repo: https://github.com/feuerbacherb/password-generator
 * Live: https://feuerbacherb.github.io/password-generator/
+
+
+![](https://img.shields.io/badge/License-Apache%20License%202.0-green)
